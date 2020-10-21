@@ -1,0 +1,55 @@
+$dark-color: #363537;
+$main-font : 'Poppins';
+$secondary-font : 'Leckerli One';
+
+.c-featuredContent__button {
+  margin: 20px 0;
+  font-size: .875rem;
+}
+.c-primaryButton {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  color: #26232f;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 1;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  &:hover::after {
+    background-position: 50%, 100% 100%;
+  }
+  &::after {
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 3px;
+    background-color: #fff;
+    background: linear-gradient(0deg,#fff -100%,#fff),linear-gradient(107deg,#26232f,#26232f 50%,#59D9B7 0,#95F9E3);
+    background-size: calc(100% - 4px) calc(100% - 4px),200% 200%;
+    background-position: 50%,0 0;
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+}
+button {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background: none;
+
+  &.c-primaryButton a, &.c-primaryButton span {
+    padding: 12.5px 18px;
+    display: block;
+    text-decoration: none;
+    color: #26232f;
+    font-family: $main-font;
+    font-weight: 700;
+  }
+}
